@@ -1,2 +1,2 @@
 # Machine-Learning
-Set of notebooks about machine learning algorithms
+Implementation of different machine learning algorithms
