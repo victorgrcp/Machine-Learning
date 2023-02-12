@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-static void calculate_centroid(float *centroid, float *points, int n_dims, int *cluster_idxs, int n_points_cluster) {
+static void calculate_centroid(float *centroid, float *points[], int n_dims, int *cluster_idxs, int n_points_cluster) {
     float mean_for_dim[n_dims];
     memset(mean_for_dim, 0, n_dims);
     for (int i = 0; i < n_points_cluster; i++) {
@@ -11,7 +11,7 @@ static void calculate_centroid(float *centroid, float *points, int n_dims, int *
     }
 }
 
-double bic_score(float *points, int n_dims, int n_samples, int *labels, int n_clusters) {
+double bic_score(float *points[], int n_dims, int n_samples, int *labels[], int n_clusters) {
 
     double score = 0.0;
     double log_likelihood = 0.0;
